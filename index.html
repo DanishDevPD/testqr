@@ -16,10 +16,10 @@
         // check compatibility
         if (!("BarcodeDetector" in globalThis)) {
           console.log("Barcode Detector is not supported by this browser.");
-          document.getElementById("ckBarcode").innerText("Barcode Detector is NOT supported by this browser.");
+          document.getElementById("ckBarcode").innerText = "Barcode Detector is NOT supported by this browser.";
         } else {
           console.log("Barcode Detector supported!");
-            document.getElementById("ckBarcode").innerText("Barcode Detector IS supported by this browser.");
+            document.getElementById("ckBarcode").innerText ="Barcode Detector IS supported by this browser.";
         
           // create new detector
           const barcodeDetector = new BarcodeDetector({
