@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, World!</title>
+</head>
+<body>
+
+    <h1>Hello, World!</h1>
+    <p>Welcome to my simple web page.</p>
+    <video id="stream" style="width: 100vw; height: 100vh;" />
+    <script>
+        console.log("Hello");
+        // check compatibility
+        if (!("BarcodeDetector" in globalThis)) {
+          console.log("Barcode Detector is not supported by this browser.");
+        } else {
+          console.log("Barcode Detector supported!");
+        
+          // create new detector
+          const barcodeDetector = new BarcodeDetector({
+            formats: ["code_39", "codabar", "ean_13"],
+          });
+        }
+    </script>
+
+</body>
+</html>
